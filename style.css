@@ -79,7 +79,7 @@ body {
 }
 .logo { font-weight: 700; letter-spacing: -0.02em; color: var(--text); text-decoration: none; }
 .nav nav { display: flex; gap: 16px; align-items: center; }
-.nav nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
+.nav nav a { color: var(--text); text-decoration: none; font-size: 14px; }
 .nav nav a:hover { color: var(--text); }
 .pill { background: var(--text); color: #000 !important; padding: 6px 14px; border-radius: 999px; font-weight: 600; }
 
@@ -157,6 +157,29 @@ input[type=range]::-moz-range-thumb {
   width: 30px; height: 30px; border-radius: 50%;
   background: #fff; border: none;
 }
+
+/* ---------- Email form ---------- */
+.notify {
+  display: flex; gap: 6px;
+  max-width: 460px; margin: 0 auto;
+  padding: 6px; border-radius: 999px;
+}
+.notify input {
+  flex: 1; min-width: 0;
+  background: transparent; border: none; outline: none;
+  color: var(--text); font-size: 16px; padding: 0 16px;
+}
+.notify input::placeholder { color: var(--muted); }
+.go {
+  background: var(--text); color: #000;
+  border: none; border-radius: 999px;
+  padding: 12px 22px; font-size: 16px; font-weight: 600; cursor: pointer;
+  transition: transform 0.25s cubic-bezier(.2,.9,.3,1.4);
+}
+.go:hover { transform: scale(1.05); }
+.go:active { transform: scale(0.95); }
+.go:disabled { opacity: 0.6; cursor: wait; }
+#status { margin-top: 16px; min-height: 1.5em; color: var(--muted); }
 
 footer { text-align: center; padding: 40px 20px 60px; color: var(--muted); font-size: 13px; }
 
