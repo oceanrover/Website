@@ -1,14 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Greeter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumen</title>
+  <meta name="description" content="Lumen: a liquid glass demo page.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Greeter</h1>
-  <input id="name" placeholder="Your name">
-  <button id="btn">Greet</button>
-  <p id="msg"></p>
+
+  <!-- Moving colour blobs behind the glass -->
+  <div class="bg" aria-hidden="true">
+    <span class="blob b1"></span>
+    <span class="blob b2"></span>
+    <span class="blob b3"></span>
+  </div>
+
+  <header class="nav glass">
+    <a href="#top" class="logo">Lumen</a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#specs">Specs</a>
+      <a href="#buy" class="pill">Buy</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <p class="tag glass">New</p>
+      <h1>Light, made<br>tangible.</h1>
+      <p class="sub">Lumen is a pocket-sized lamp that bends light like glass.</p>
+      <div class="actions">
+        <a href="#buy" class="btn glass">Order now</a>
+        <a href="#features" class="link">See how it works</a>
+      </div>
+      <div class="orb glass" id="orb" aria-hidden="true"></div>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Made to feel alive.</h2>
+      <div class="grid">
+        <article class="card glass reveal">
+          <h3>Adaptive glow</h3>
+          <p>Brightness and colour follow the time of day.</p>
+        </article>
+        <article class="card glass reveal">
+          <h3>Touch control</h3>
+          <p>Slide a finger across the surface to dim or brighten.</p>
+        </article>
+        <article class="card glass reveal">
+          <h3>20-hour battery</h3>
+          <p>Charge once a week and forget about it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="specs" class="specs reveal">
+      <div class="panel glass">
+        <h2>Move the slider.</h2>
+        <p id="levelText">Brightness: 60%</p>
+        <input type="range" id="level" min="0" max="100" value="60" aria-label="Brightness">
+      </div>
+    </section>
+
+    <section id="buy" class="buy reveal">
+      <h2>Ready when you are.</h2>
+      <a href="#top" class="btn glass big">Order Lumen</a>
+    </section>
+
+  </main>
+
+  <footer>Lumen is a fictional demo product.</footer>
+
   <script src="script.js"></script>
 </body>
 </html>
